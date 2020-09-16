@@ -1,0 +1,91 @@
+<!--miniprogram/pages/ShoppingCart/ShoppingCart.wxml-->
+<view style="font-size:50rpx;text-align: center;align-items: center;color:white;width:100%;height:30px;background: #008fd5;">购物车</view>
+<!-- 购物车 -->
+<view wx:if="{{step===1}}">
+<view class="cart">
+  <view class="cart-body">
+    <view wx:for="{{order}}" class="cart-all">
+      <view class="cart-a">
+      {{item.name}}
+      </view>
+      <view class="cart-b">
+     <text style="color:red">价格:</text>{{item.price}}元
+      </view>
+      <view class="cart-c">
+     {{item.mete}}份
+      </view>
+    </view>
+  </view>
+</view>
+  <!-- 底部 -->
+  <view class='bottom'>
+    <view>
+      <text style='font-size: 28rpx;margin-right: 20rpx;color:#333'>合计</text>
+      <text style='font-size: 36rpx; color: #F87039'>￥{{jiesuan}}</text>
+    </view>
+    <view style='width: 260rpx;height: 98rpx;'>
+      <view bindtap='topay' class='topay'>去结算</view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{step===2}}">
+  <view class="a">
+    是否为本超市会员
+  </view>
+  <view class="b" style="margin-top:10rpx;font-size: 0.8rem;">
+    (本超市会员可以享受八折优惠)
+  </view>
+  <view class="b" style="margin:0;font-size: 0.8rem;">
+    若您的金额达到50元即可申请本超市会员
+  </view>
+  <view style='font-size: 0.7rem; color: #F87039;text-align: center;align-items: center;'>
+  (当前金额￥{{jiesuan}})
+  </view>
+  <div class="nav">
+      <button class="prev" size="mini" type="default" bindtap="prevStep">直接付款</button>
+      <button class="next" size="mini" type="default" bindtap="nextStep">会员优惠付款</button>
+  </div>
+  <div class="nav">
+      <button class="prev" size="mini" type="default" bindtap="gotoStep" style="background-color: #F87039;" >申请会员</button>
+      <button class="next" size="mini" type="default" bindtap="backStep" style="background-color: #F87039;">返回</button>
+  </div>
+</view>
+<view wx:if="{{step===3}}">
+  <text style='font-size: 40rpx; color: #F87039;text-align: center;align-items: center;'>会员八折优惠付款￥{{vipjiesuan}}</text>
+  <input class="a" style="border: 0.5rem solid #0085df;background-color: skyblue;" maxlength="10" placeholder-style="color:#F76260" bindinput="Inputnew" placeholder="请输入您的手机号(作为您的VIP特权)"/>
+  <div class="nav">
+      <button class="prev" size="mini" type="default" bindtap="backStep">返回上一步</button>
+      <button class="next" size="mini" type="default" bindtap="tobeStep">确认并付款</button>
+  </div>
+</view>
+<view wx:if="{{step===4}}">
+  <view class="a">
+    普通会员付款成功
+  </view>
+  <view class="b">
+    欢迎下次光临
+  </view>
+  <div class="nav">
+    <button class="back" size="mini" type="default" bindtap="backStep">返回</button>
+  </div>
+</view>
+<view wx:if="{{step===5}}">
+  <text style='font-size: 40rpx; color: #F87039;text-align: center;align-items: center;'>会员八折优惠付款￥{{vipjiesuan}}</text>
+  <input class="a" style="border: 0.5rem solid #0085df;background-color: skyblue;" maxlength="10" placeholder-style="color:#F76260" bindinput="Inputold" placeholder="输入会员号"/>
+  <div class="nav">
+      <button class="prev" size="mini" type="default" bindtap="backStep">返回上一步</button>
+      <button class="next" size="mini" type="default" bindtap="vipStep">确认并付款</button>
+  </div>
+</view>
+<view wx:if="{{step===6}}">
+  <view class="a">
+    VIP会员付款成功
+  </view>
+  <view class="b">
+    欢迎下次光临
+  </view>
+  <div class="nav">
+    <button class="back" size="mini" type="default" bindtap="backStep">返回</button>
+  </div>
+</view>

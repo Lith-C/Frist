@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/select/select",
+    "pages/index/index",
+    "pages/Administrators/Administrators",
+    "pages/ShoppingCart/ShoppingCart",
+    "pages/judge/judge"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "Supermarket",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/select/select",
+        "text": "登录",
+        "iconPath": "./images/用户.png",
+        "selectedIconPath": "./images/用户2.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "菜单",
+        "iconPath": "./images/菜单.png",
+        "selectedIconPath": "./images/菜单2.png"
+      },
+      {
+        "pagePath": "pages/ShoppingCart/ShoppingCart",
+        "text": "购物车",
+        "iconPath": "./images/购物车.png",
+        "selectedIconPath": "./images/购物车2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

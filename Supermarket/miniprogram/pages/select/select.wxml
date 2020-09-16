@@ -1,0 +1,14 @@
+<!--miniprogram/pages/select/select.wxml-->
+<view class="title" style="background-image: url(../select/jiaying.png)">
+  <view class="head"> 
+    欢迎来到嘉大超市收银平台
+  </view>
+</view>
+<view class="select">
+ <view class="boom01">
+    <button  bindtap="go" class="button01">点击进入选购</button>
+  </view>
+ <view class="boom02">
+    <button bindtap="but" class="button02">进入管理员模式</button>
+ </view>
+</view>

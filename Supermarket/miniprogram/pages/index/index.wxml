@@ -1,0 +1,66 @@
+<!--index.wxml-->
+<!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+      size="mini"
+    ></button>
+<view class="userinfo-nickname-wrapper">
+      <text class="userinfo-nickname">欢迎进入本超市</text>
+    </view> 
+  </view>
+  <!-- <view class="title"><button size="mini"  bindtap="onQuery">库存查询</button>
+  </view> -->
+  <!-- 查询记录 -->
+<view class="guide">
+  <view class="onquery-list">
+    <view wx:for="{{but}}" wx:for-index="idx" wx:key="{{item.butid}}" class="onquery">
+      <button class="{{butcid==idx?'butActive':'but'}}" bindtap="itemonQuery" data-idx="{{idx}}">{{item.name}}</button>
+    </view>
+  </view>
+  <view class="result">
+    <view class="result-for" wx:for="{{queryResult}}" wx:key="{{item.keyid}}" wx:for-index="idx">
+      <view class="result-list">
+        <view class="name"><text style="color:red">货品名:</text>{{item.name}}</view>
+        <view class="price"><text style="color:red" decode="nbsp">￥&nbsp;&nbsp;</text>{{item.price}}</view>
+        <view class="mete">
+          <view class="mete-box">
+          <view bindtap="onCounterInc" data-idx="{{idx}}" style="color:green" class="mete-but">+</view>
+          <text class="mete-p">{{item.mete}}</text>
+          <view bindtap="onCounterDec" data-idx="{{idx}}"  style="color:green" class="mete-but">-</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cart">
+  <view class="cart-image" style="margin-top:{{margintop01}}">
+    <image class="cart-img" image src="../index/购物车.png"></image> 
+  </view>
+  <view class="cart-all" bindtap="click" style="height:{{height}}">
+    <view wx:for="{{order}}" class="cart-item">
+      <view class="cart-a">
+      {{item.name}}
+      </view>
+      <view class="cart-b">
+     <text style="color:red">价格:</text>{{item.price}}元
+      </view>
+      <view class="cart-c">
+     {{item.mete}}份
+      </view>
+    </view>
+  </view>
+  <view class='cart-bottom' style="margin-top:{{margintop02}}">
+    <view>
+      <text style='font-size: 28rpx;margin-right: 20rpx;color:#333'>合计</text>
+      <text style='font-size: 28rpx; color: #F87039'>￥{{jiesuan}}</text>
+    </view>
+    <view class="cart-but">
+      <button class="cart-button" size="mini" type="default" bindtap="sellte">结算</button>
+    </view>
+  </view>
+</view>

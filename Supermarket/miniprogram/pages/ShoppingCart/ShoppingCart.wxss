@@ -1,0 +1,131 @@
+/* miniprogram/pages/ShoppingCart/ShoppingCart.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background: #efefef;
+}
+ 
+.cart{
+  width: 99%;
+  line-height: 80px;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 41px;
+}
+.cart .cart-body{
+  width: 100%;
+}
+.cart .cart-body .cart-all{
+  display: flex;
+  font-size: 33rpx;
+  text-align: center;
+  align-items: center;
+  height: 60px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+.cart .cart-body .cart-a{
+
+  flex: 1;
+}
+.cart .cart-body .cart-b{
+  flex: 1;
+}
+.cart .cart-body .cart-c{
+  flex: 1;
+  color: red;
+}
+
+
+/* 结算按钮 */
+.bottom {
+  width: 100%;
+  height: 98rpx;
+  border-top: 1rpx solid #efefef;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+ 
+button::after {
+  border: none;
+}
+ 
+.topay {
+  background-color: #F87039;
+  color: #fff;
+  width: 260rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  font-size: 32rpx;
+  text-align: center;
+}
+ 
+.button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 60rpx;
+}
+ 
+.button .btn {
+  background-color: #F87039;
+  width: 360rpx;
+  height: 80rpx;
+  color: #fff;
+  font-size: 32rpx;
+  line-height: 80rpx;
+}
+
+/* 界面语句 */
+.a{
+  margin-top: 15%;
+  text-align: center;
+  align-items: center;
+  font-size: 1rem;
+  color: #008fd5;
+}
+.b{
+  margin-top: 20%;
+  text-align: center;
+  align-items: center;
+  font-size: 1rem;
+  color: red;
+}
+
+
+/* 结算会员判断按钮 */
+.nav {
+  /* margin-top: 50rpx; */
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  margin: 50rpx 50rpx 0 50rpx;
+}
+
+.nav .prev {
+  margin-left: unset;
+  background-color: #008fd5;
+  color: #fff;
+}
+
+.nav .next {
+  margin-right: unset;
+  background-color: #008fd5;
+  color: #fff;
+}
+.nav .back{
+  margin-top: 30px;
+  width: 100px;
+  text-align: center;
+  align-items: center;
+  background-color: #F87039;
+  color: #fff;
+}

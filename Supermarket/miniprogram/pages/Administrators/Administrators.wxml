@@ -1,0 +1,129 @@
+<!--miniprogram/pages/Administrators/Administrators.wxml-->
+    <text class="userinfo-nickname">欢迎进入管理员界面</text>
+<view class="but">
+ <view class="button" wx:for="{{button}}" wx:for-index="idx" wx:key="{{item.butid}}">
+  <button bindtap="onQuery" class="{{butid==idx?'title':'title-a'}}" data-idx="{{idx}}">{{item.button}}</button>
+ </view>
+</view>
+  <!-- 查询记录 -->
+<view class="guide-a" wx:if="{{step===1}}">
+  <view class="onquery-list-a">
+    <view wx:for="{{but}}" wx:for-index="idx" wx:key="{{item.butid}}" class="onquery-a">
+      <button class="{{butcid==idx?'butActive-a':'but-a'}}" bindtap="itemonQuery" data-idx="{{idx}}">{{item.name}}</button>
+    </view>
+  </view>
+  <view class="result-a">
+    <view class="result-for-a" wx:for="{{queryResult}}">
+      <view class="result-list-a">
+        <view class="name-a"><text style="color:red">货品名:</text>{{item.name}}</view>
+        <view class="price-a"><text style="color:red">价格:</text>{{item.price}}元</view>
+        <view class="value-a"><text style="color:red">库存:</text>{{item.value}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="guide-b" wx:if="{{step===2}}">
+  <view class="onquery-list-b">
+    <view wx:for="{{but}}" wx:for-index="idx" wx:key="{{item.butid}}" class="onquery-b">
+      <button class="{{butcid==idx?'butActive-b':'but-b'}}" bindtap="itemonQuery" data-idx="{{idx}}">{{item.name}}</button>
+    </view>
+  </view>
+  <view class="result-b" wx:if="{{steps===1}}">
+    <view class="result-for-b" wx:for="{{queryResult}}" wx:for-index="{{item.keyid}}" wx:key="{{item.keyid}}">
+      <view class="result-list-b">
+        <view class="name-b"><text style="color:red">货品名:</text>{{item.name}}</view>
+        <view class="price-b"><text style="color:red">价格:</text>{{item.price}}元</view>
+        <view class="value-b"><text style="color:red">库存:</text>{{item.value}}</view>
+      </view>
+      <view class="result-list-bb">
+        <button class="revise" bindtap="revise" data-idx="{{item.keyid}}">修改</button>
+        <button class="remove" bindtap="remove" data-idx="{{item.keyid}}">删除</button>
+      </view>
+    </view>
+    <button class="new" size="mini" bindtap="new">新增</button>
+  </view>
+  <!-- 修改货品 -->
+  <view class="result-b" wx:if="{{steps===2}}">
+    <view class="result-for-b">
+      <view style="font-size:40rpx;color:red;text-align:center;">修改货品</view>
+      <view class="result-list-b">
+        <view class="name-b"><text style="color:red">货品名</text>
+          <view class="name-b">
+          <input style="color:#F76260;border: 0.1rem solid black;background-color:#f6f6f6" placeholder-style="color:black" bindinput="newname" placeholder="{{query.name}}"/>
+          </view>
+        </view>
+        <view class="price-b"><text style="color:red">价格￥</text>
+         <view class="price-b">
+          <input  style="color:#F76260;border: 0.1rem solid black;background-color:#f6f6f6" type="digit" value="{{newprice}}" placeholder-style="color:#black" bindinput="newprice" placeholder="{{query.price}}"/>
+         </view>
+        </view>
+        <view class="value-b"><text style="color:red">库存</text>
+         <view class="value-b">
+          <input style="color:#F76260;border: 0.1rem solid black;background-color:#f6f6f6" type="number" value="{{newvalue}}" placeholder-style="color:#black" bindinput="newvalue" placeholder="{{query.value}}"/>
+         </view>
+        </view>
+      </view>
+      <view class="result-list-bb">
+        <button class="revise" bindtap="Ok">确认</button>
+        <button class="remove" bindtap="Back">返回</button>
+      </view>
+    </view>
+  </view>
+  <!-- 新增货品 -->
+  <view class="result-b" wx:if="{{steps===3}}">
+    <view class="result-for-b">
+      <view style="font-size:40rpx;color:red;text-align:center;">新增货品</view>
+      <view class="result-list-b">
+        <view class="name-b"><text style="color:red">货品名</text>
+          <view class="name-b">
+          <input style="color:#F76260;border: 0.1rem solid black;background-color:#f6f6f6" placeholder-style="color:black" bindinput="newname" placeholder="{{query.name}}"/>
+          </view>
+        </view>
+        <view class="price-b"><text style="color:red">价格￥</text>
+         <view class="price-b">
+          <input  style="color:#F76260;border: 0.1rem solid black;background-color:#f6f6f6" placeholder-style="color:#black" type="digit" value="{{newprice}}" bindinput="newprice" placeholder="{{query.price}}"/>
+         </view>
+        </view>
+        <view class="value-b"><text style="color:red">库存</text>
+         <view class="value-b">
+          <input style="color:#F76260;border: 0.1rem solid black;background-color:#f6f6f6"  placeholder-style="color:#black" type="number" value="{{newvalue}}" bindinput="newvalue" placeholder="{{query.value}}"/>
+         </view>
+        </view>
+      </view>
+      <view class="result-list-bb">
+        <button class="revise" bindtap="Oknew">确认</button>
+        <button class="remove" bindtap="Back">返回</button>
+      </view>
+    </view>
+  </view>
+  <view class="result-b" wx:if="{{steps===4}}">
+    <view class="result-for-b">
+      <view style="font-size:40rpx;color:red;text-align:center;">删除货品</view>
+      <view class="result-list-d">
+        <view class="name-b"><text style="color:red">货品名:</text>{{query.name}}</view>
+        <view class="price-b"><text style="color:red">价格:</text>{{query.price}}元</view>
+        <view class="value-b"><text style="color:red">库存:</text>{{query.value}}</view>
+      </view>
+      <view class="result-list-bb">
+        <button class="revise" bindtap="Okremove">确认</button>
+        <button class="remove" bindtap="Back">返回</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="guide-c" wx:if="{{step===3}}">
+  <view class="result-c" wx:for="{{order}}">
+    <view class="result-list-c" >
+        <view class="id"><text style="color:red">订单ID:</text>{{item._id}}</view>
+    </view>
+    <view class="result-list-c">
+        <view class="jiesuan"><text style="color:red">计算金额:</text>{{item.jiesuan}}</view>
+        <view class="state"><text style="color:red">状态:</text>{{item.state}}</view>
+        <view class="more" bindtap="more">更多</view>
+    </view>
+    <view  class="result-list-c" wx:if="{{steps===5}}" wx:for="{{target}}">
+          <view class="name"><text style="color:red">货品名:</text>{{item.name}}</view>
+          <view class="mete"><text style="color:red">数量:</text>{{item.mete}}份</view>
+    </view>
+  </view>
+</view>

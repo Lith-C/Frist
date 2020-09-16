@@ -1,0 +1,197 @@
+/**index.wxss**/
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.userinfo{
+  margin-top: 0;
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 300ms ease;
+}
+.userinfo-avatar{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.userinfo-avatar[size]{
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.userinfo-avatar:after {
+  border: none;
+}
+
+.userinfo-nickname {
+  font-size: 40rpx;
+  color: #008fd5;
+  text-align: center;
+  align-items: center;
+  padding-left: 20rpx;
+  margin-left: 100rpx;
+}
+
+.userinfo-nickname::after {
+  border: none;
+}
+
+.userinfo-nickname-wrapper {
+  flex: 1;
+}
+
+/* .title{
+  text-align: center;
+  align-items: center;
+  color: red;
+  font-size: 40rpx;
+} */
+
+.guide{
+  margin-top: 15rpx;
+  height: 100%;
+  width: 99%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+.guide .onquery-list{
+  flex: 3;
+}
+.guide .onquery-list .onquery{
+  margin-left: 0;
+  margin-top: 10rpx;
+}
+.guide .onquery-list .onquery .but{
+  font-size: 33rpx;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  color: #007aff; 
+  background-color: #ffe;
+}
+.guide .onquery-list .onquery .butActive{
+  font-size: 33rpx;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  color: #007aff; 
+  background-color: #ffc;
+}
+.guide .result{
+  margin-top: 10rpx;
+  border: 0.5px solid black;
+  /* margin-right: 20rpx; */
+  flex:8;    
+}
+.guide .result .result-for{
+  height: 40px;
+  border-bottom: medium dashed black;
+}
+.guide .result .result-for .result-list{
+  display: flex;
+  font-size: 31rpx;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+}
+.guide .result  .result-for .result-list .name{
+  /* padding-top: 15px; */
+  /* padding-left: 5px; */
+  flex: 3;
+}
+.guide .result   .result-for .result-list .price{
+  /* padding-top: 15px; */
+  /* padding-left: 5px; */
+  flex:2;
+}
+.guide .result   .result-for .result-list .mete{
+  width: 90px;
+  flex:3;
+  /* margin-top: 5px; */
+  text-align: center;
+  align-content: center;
+}
+.guide .result   .result-for .result-list .mete .mete-box{
+  height: 40px;
+  display: flex;
+}
+.guide .result   .result-for .result-list .mete  .mete-box .mete-p{
+  padding-top: 11px; 
+  height: 40px;
+}
+.guide .result   .result-for .result-list .mete .mete-box .mete-but{
+  padding-top: 2px;
+  width: 40px;
+  font-size: 60rpx;
+
+}
+.cart{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  text-align: center;
+  /* align-items: center;  */
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+}
+.cart .cart-image{
+  flex: 3;
+  flex-direction: row;
+}
+.cart .cart-image .cart-img{
+  height: 50px;
+  width: 50px;
+}
+.cart .cart-all{
+  flex: 5;
+  /* height: 80px; */
+  border: yellow solid 0.1rem;
+}
+.cart .cart-item{
+  display: flex;
+  font-size: 28rpx;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+}
+.cart .cart-item .cart-a{
+  flex: 1;
+}
+.cart .cart-item .cart-b{
+  flex: 1;
+}
+.cart .cart-item .cart-c{
+  flex: 1;
+  color: red;
+}
+/* 结算按钮 */
+.cart .cart-bottom{
+  flex: 3;
+  width: 100%;
+  flex-direction: row;
+}
+.cart .cart-bottom .cart-but{
+  margin-right: unset;
+}
+.cart .cart-but .cart-button{
+  margin-top: 10px;
+  color: black;
+  height: 30px;
+  background: yellow;
+}

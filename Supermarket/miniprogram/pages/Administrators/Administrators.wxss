@@ -1,0 +1,282 @@
+/* miniprogram/pages/Administrators/Administrators.wxss */
+page {
+  background: #f6f6f6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.userinfo-nickname {
+  font-size:50rpx;
+  text-align: center;
+  align-items: center;
+  color:white;
+  width:100%;
+  height:30px;
+  background: #008fd5;
+}
+.but{
+  display: flex;
+  width: 100%;
+}
+.but .button{
+  margin-top: 10rpx;
+  flex:1;
+}
+.but .button .title{
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  font-size: 25rpx;
+  color: #008fd5;
+  background-color: white;
+}
+.but .button .title-a{
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  font-size: 26rpx;
+  color: #008fd5;
+  background-color: #e6e6e6;
+}
+
+.guide-a{
+  margin-top: 20rpx;
+  padding-top: 5px;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding-bottom: 20rpx;
+}
+.guide-a .onquery-list-a{
+  flex: 3;
+}
+.guide-a .onquery-list-a .onquery-a{
+  margin-left: 0;
+  margin-top: 10rpx;
+}
+.guide-a .onquery-list-a .onquery-a .but-a{
+  width: 85px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  color: #007aff; 
+  background-color: #ffe;
+}
+.guide-a .onquery-list-a .onquery-a .butActive-a{
+  width: 85px;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  color: #007aff; 
+  background-color: #ffc;
+}
+.guide-a .result-a{
+  margin-top: 10rpx;
+  border: 0.3px solid black;
+  margin-right: 20rpx;
+  flex:7;    
+}
+.guide-a .result-a .result-for-a{
+  height: 40px;
+  border-bottom: medium dashed black;
+}
+.guide-a .result-a .result-for-a .result-list-a{
+  display: flex;
+  font-size: 30rpx;
+  padding-top: 10px;
+}
+.guide-a .result-a  .result-for-a .result-list-a .name-a{
+  padding-left: 5px;
+  width: 40%;
+}
+.guide-a .result-a   .result-for-a .result-list-a .value-a{
+  width: 30%;
+}
+.guide-a .result-a   .result-for-a .result-list-a .price-a{
+  width: 30%;
+}
+.guide-b{
+  margin-top: 20rpx;
+  padding-top: 5px;
+  height: 100%;
+  width: 99%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding-bottom: 20rpx;
+}
+.guide-b .onquery-list-b{
+  flex: 3;
+}
+.guide-b .onquery-list-b .onquery-b{
+  margin-left: 0;
+  margin-top: 10rpx;
+}
+.guide-b .onquery-list-b .onquery-b .but-b{
+  width: 75px;
+  height: 40px;
+  font-size: 30rpx;
+  text-align: center;
+  align-items: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  color: #007aff; 
+  background-color: #ffe;
+}
+.guide-b .onquery-list-b .onquery-b .butActive-b{
+  width: 75px;
+  height: 40px;
+  font-size: 30rpx;
+  text-align: center;
+  align-items: center;
+  border: 0.5px solid rgba(0, 0, 0, 0.1);
+  color: #007aff; 
+  background-color: #ffc;
+}
+.guide-b .result-b{
+  margin-top: 10rpx;
+  border: 0.3px solid black;
+  margin-right: 1rpx;
+  flex:8;    
+}
+.guide-b .result-b .result-for-b{
+  border-bottom: 0.3px solid black;
+}
+.guide-b .result-b .result-for-b .result-list-b{
+  display: flex;
+  font-size: 30rpx;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.guide-b .result-b  .result-for-b .result-list-b .name-b{
+  flex: 4;
+  color: black;
+  text-align: center;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+.guide-b .result-b   .result-for-b .result-list-b .price-b{
+  flex: 3;
+  color: black;
+  text-align: center;
+  padding-right: 0.1rem;
+}
+.guide-b .result-b   .result-for-b .result-list-b .value-b{
+  flex: 3;
+  color: black;
+  text-align: center;
+  padding-right: 0.1rem;
+}
+
+
+.guide-b .result-b .result-for-b .result-list-bb{
+  display: flex;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.guide-b .result-b   .result-for-b .result-list-bb .revise{
+  width: 40%;
+  font-size: 30rpx;
+  background: #f6f6f6;
+}
+.guide-b .result-b   .result-for-b .result-list-bb .remove{
+  width: 40%;
+  font-size: 30rpx;
+  background: #f6f6f6;
+}
+
+.guide-b .result-b .new{
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+}
+
+
+.guide-c{
+  margin-top: 20rpx;
+  padding-top: 5px;
+  height: 100%;
+  width: 99%;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.guide-c .result-c{
+  margin-top: 10rpx;
+  border: 0.3px solid black;   
+  width: 100%;
+  padding-bottom: 10rpx;
+}
+.guide-c .result-c .result-list-c{
+  display: flex;
+  font-size: 40rpx;
+  text-align: center;
+}
+.guide-c .result-c  .result-list-c .id{
+  border-bottom: 0.3px solid black;
+  font-size: 35rpx;
+}
+.guide-c .result-c .result-list-c .jiesuan{
+  padding-left: 5px;
+  width: 40%;
+}
+.guide-c .result-c .result-list-c .state{
+  width: 40%;
+}
+.guide-c .result-c .result-list-c .more{
+  width: 20%;
+  color: red;
+}
+.guide-c .result-c .result-list-c .name{
+  width: 40%;
+  height: 40rpx;
+}
+.guide-c .result-c .result-list-c .mete{
+  width: 40%;
+  height: 40rpx;
+}
+
+.guide-b .result-b{
+  margin-top: 10rpx;
+  border: 0.3px solid black;
+  margin-right: 1rpx;
+  flex:8;    
+}
+.guide-b .result-b .result-for-b{
+  border-bottom: 0.3px solid black;
+}
+.guide-b .result-b .result-for-b .result-list-d{
+  display: flex;
+  font-size: 33rpx;
+  padding-top: 10px;
+  text-align: center;
+  padding-bottom: 24px;
+}
+.guide-b .result-b  .result-for-b .result-list-d .name-b{
+  flex: 4;
+  color: black;
+  text-align: center;
+  padding-left: 0.1rem;
+  padding-right: 0.1rem;
+}
+.guide-b .result-b   .result-for-b .result-list-d .price-b{
+  flex: 3;
+  color: black;
+  text-align: center;
+  padding-right: 0.1rem;
+}
+.guide-b .result-b   .result-for-b .result-list-d .value-b{
+  flex: 3;
+  color: black;
+  text-align: center;
+  padding-right: 0.1rem;
+}

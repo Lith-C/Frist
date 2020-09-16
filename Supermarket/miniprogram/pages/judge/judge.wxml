@@ -1,0 +1,12 @@
+<!--miniprogram/pages/judge/judge.wxml-->
+<view class="a">
+  <view class="text">欢迎来到管理员界面 </view>
+  <view class="text">请在下框输入管理员权限</view>
+  <input class="input"  maxlength="10" placeholder-style="color:#F76260" bindinput="bindKeyInput" placeholder="输入管理员号"/>
+  <view class="go">
+  <button  bindtap="go" style="color:white" class="into">进入</button>
+  </view>
+  <view class="next">
+  <button  size="mini" bindtap="gohome">回到首页</button>
+  </view>
+</view>
